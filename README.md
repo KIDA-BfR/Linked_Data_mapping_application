@@ -7,7 +7,7 @@
    ```bash
    streamlit run Home.py
    ```
-**Note**: System is still under the development. In case of errors refer to the stable release of the codes from https://github.com/KIDA-BfR/Linked_Data
+**Note**: System is still under the development. In case of errors refer to the stable release of the backend codes (could be run directly in Colab without a pre-installation) from https://github.com/KIDA-BfR/Linked_Data
 
 ---
 
