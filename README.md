@@ -82,6 +82,6 @@ The user can also upload **tables** to map multiple terms at once.
 
 Example input files are provided in the **`auxiliary_files`** [folder](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/auxiliary_files)
 
-[Figure 4 – Batch mapping using tables](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Mapping_multiple.PNG)
+![Figure 4 – Batch mapping using tables](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Mapping_multiple.PNG)
 
 ---
