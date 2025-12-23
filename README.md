@@ -1,3 +1,7 @@
+# Full streamlit app 
+
+Download the repository, install all required dependencies and run Home.py with `strreamlit run Home.py`
+
 # Mapping Service (Streamlit) — README
 
 This Streamlit page provides a “Mapping service” UI that maps **(Term + Definition)** to identifiers in:
