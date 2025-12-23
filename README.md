@@ -72,7 +72,7 @@ So if ontology lists change in the UI, the cached agent **rebuilds automatically
 
 ## 4) Output formats
 
-### Wikidata agent output
-The Wikidata agent is expected to return JSON like:
+### Agent output
+The Agent is expected to return JSON like:
 ```json
 {"qid":"Q123","skos":"exact","explanation":"..."}
