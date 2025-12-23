@@ -69,8 +69,8 @@ The **mapping service** provides the following options:
 - Mapping a **single term** to:
   - Wikidata labels, or
   - BioPortal labels  
-  using a **single specialized deep agent**
-- Mapping simultaneously to **both Wikidata and BioPortal** using a **multi-agent system**
+  using a **single specialized deep agent** : [wikidata](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/wikidata_agent_and_tools) or [bioportal](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/bioportal_agent_and_tools)
+- Mapping simultaneously to **both Wikidata and BioPortal** using a [**multi-agent system**](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/bioportal_wikidata_system)
 
 ![Figure 3 – Mapping service options](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Mapping_single.PNG)
 
