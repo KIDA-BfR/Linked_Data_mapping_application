@@ -20,6 +20,7 @@ from bioportal_agent_and_tools.deep_agent_bioportal import get_agent_bioportal
 from bioportal_wikidata_system.multiagent_system import get_multiagent  # NEW
 
 
+
 # ============================================================
 # Page setup & guards
 # ============================================================
@@ -36,7 +37,6 @@ if st.button("← Back to Home"):
     st.switch_page("Home.py")
 
 st.divider()
-
 
 # ============================================================
 # Session-state defaults
@@ -70,6 +70,7 @@ for k, v in defaults.items():
 # ============================================================
 # Helpers
 # ============================================================
+
 def _parse_csv_list(text: str) -> List[str]:
     items = [x.strip() for x in (text or "").split(",") if x.strip()]
     # stable de-dupe
@@ -112,8 +113,8 @@ def _qid_to_url_if_needed(identifier: str) -> str:
 
 def _extract_multiagent_fields(parsed: Dict[str, Any]) -> Dict[str, str]:
     """
-    Multiagent final formatting tool (agentmapping_format) returns:
-      {"ID": "...", "SKOS": "...", "SKOS_explanation": "..."} :contentReference[oaicite:1]{index=1}
+    Multiagent final formatting tool returns:
+      {"ID": "...", "SKOS": "...", "SKOS_explanation": "..."}
     But we also accept fallback keys to be robust.
     """
     ident = (
@@ -159,15 +160,12 @@ If no proper identifier is found after 10 iterations, return "No wiki match". In
 
 
 def _question_bioportal(term: str, definition: str, term_onts: List[str], trusted_onts: List[str]) -> str:
-    # Minimal but functional prompt (your previous version was a stub).
-    # Duplication of wikidata extensive prompt is not needed as the logic is more rigid and is defined in the system prompt
     return f"""Find the best BioPortal identifier/IRI for the term {term} with definition {definition}.
 
 """
 
 
 def _question_multiagent(term: str, definition: str) -> str:
-    # Keep minimal; multiagent_system's main prompt will drive the behavior.
     return f"""Map the term "{term}" with definition "{definition}" to a valid identifier from BioPortal or Wikidata.
 Return only the final JSON output.
 """
@@ -187,7 +185,6 @@ def _ensure_batch_schema(df: pd.DataFrame) -> pd.DataFrame:
         out["last_updated_run"] = ""
 
     return out
-
 
 # ============================================================
 # Agent caches
@@ -220,7 +217,6 @@ def _cached_multi_agent(
     trusted_ontologies: tuple,
     term_ontologies: tuple,
 ):
-    # Cache key includes ontology tuples (rebuild when they change)
     return get_multiagent(
         trusted_ontologies=list(trusted_ontologies),
         term_ontologies=list(term_ontologies),
@@ -295,6 +291,7 @@ else:
 trusted_ontologies: List[str] = []
 term_ontologies: List[str] = []
 
+
 # ============================================================
 # BioPortal configuration (Bioportal OR Multiagent)
 # ============================================================
@@ -320,13 +317,10 @@ if endpoint_to_run in {"Bioportal", "Multiagent"}:
     trusted_ontologies = _parse_csv_list(trusted_text)
     term_ontologies = _parse_csv_list(term_text)
 
-    # NEW: set env vars from UI (session-only)
     os.environ["BIOPORTAL_TRUSTED_ONTOLOGIES"] = trusted_text or ""
     os.environ["BIOPORTAL_TERM_ONTOLOGIES"] = term_text or ""
 
 st.divider()
-
-
 # ============================================================
 # Single-term mapping
 # ============================================================
@@ -350,12 +344,13 @@ if st.button("Run mapping", disabled=not run_single_enabled, use_container_width
         raw = result["messages"][-1].content if isinstance(result, dict) and "messages" in result else str(result)
         parsed = _parse_agent_json(raw)
 
-        qid = (parsed.get("qid") or "").strip()
-        skos = (parsed.get("skos") or "").strip()
-        expl = (parsed.get("explanation") or "").strip()
+        # ✅ FIX: accept both formats (qid/skos/explanation OR ID/SKOS/SKOS_explanation)
+        qid = (parsed.get("qid") or parsed.get("ID") or parsed.get("id") or "").strip()
+        skos = (parsed.get("skos") or parsed.get("SKOS") or "").strip()
+        expl = (parsed.get("explanation") or parsed.get("SKOS_explanation") or parsed.get("skos_explanation") or "").strip()
 
         if qid and qid != "No wiki match":
-            iri = _wikidata_url(qid)
+            iri = _wikidata_url(qid) if (qid.startswith("Q") and qid[1:].isdigit()) else qid
         else:
             iri = "No wiki match"
             skos, expl = "", ""
@@ -375,7 +370,7 @@ if st.button("Run mapping", disabled=not run_single_enabled, use_container_width
         raw = result["messages"][-1].content if isinstance(result, dict) and "messages" in result else str(result)
         parsed = _parse_agent_json(raw)
 
-        iri = (parsed.get("qid") or "").strip()  # agent returns IRI in field "qid"
+        iri = (parsed.get("qid") or "").strip()
         skos = (parsed.get("skos") or "").strip()
         expl = (parsed.get("explanation") or "").strip()
 
@@ -399,7 +394,6 @@ if st.button("Run mapping", disabled=not run_single_enabled, use_container_width
         raw = result["messages"][-1].content if isinstance(result, dict) and "messages" in result else str(result)
         parsed = _parse_agent_json(raw)
 
-        # ✅ FIX: Multiagent output is produced by agentmapping_format → keys: ID, SKOS, SKOS_explanation
         fields = _extract_multiagent_fields(parsed)
         iri = fields["iri"]
         skos = fields["skos"]
@@ -433,9 +427,6 @@ st.download_button(
     mime="application/json",
     use_container_width=True,
 )
-
-st.divider()
-
 
 # ============================================================
 # Batch mapping
