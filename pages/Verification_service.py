@@ -1,14 +1,16 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Dec 22 00:04:44 2025
 
-@author: yurt3
+@author: Iurii_Savvateev
 """
+
 
 import streamlit as st
 
-st.set_page_config(page_title="Verification service", layout="centered")
+from general_tools.skos_tools import classify_skos_match  # adjust if your path differs
 
+
+st.set_page_config(page_title="Verification service", layout="centered")
 st.title("Verification service")
 
 # Back button
@@ -17,24 +19,65 @@ if st.button("← Back to Home"):
 
 st.divider()
 
-# 3.1 Verified fields
-verified_term = st.text_input("Verified term")
-verified_iri = st.text_input("Verified IRI")
-verified_skos = st.text_input("Verified SKOS")
+# ---- Inputs (5 fields) ----
+term = st.text_input("Term")
+term_def = st.text_area("Term Definition")
 
-# 3.2 Multiple terms checkbox (you wrote "under Searched Term", but on this page
-# the closest equivalent is under "Verified term")
-multiple_terms = st.checkbox("Multiple terms")
+label = st.text_input("Label")
+label_def = st.text_area("Label Definition")
 
-# 3.2.1 / 3.2.2 Show uploader only if checked
-uploaded_file = None
-if multiple_terms:
-    uploaded_file = st.file_uploader("Upload file", type=["csv", "txt", "tsv", "xlsx"])
+provided_skos = st.selectbox(
+    "Term–Label SKOS class (provided)",
+    options=["exact", "close", "related", "none"],
+    index=0,
+)
 
 st.divider()
 
-# 3.3 Result of IRI verification
-result_iri_verification = st.text_input("Result of IRI verification")
+# ---- Result (one field) ----
+st.subheader("Result")
 
-# 3.4 Result of SKOS verification
-result_skos_verification = st.text_input("Result of SKOS verification")
+if st.button("Verify SKOS match", use_container_width=True):
+    # Basic guards
+    if not term.strip():
+        st.error("Please provide Term.")
+        st.stop()
+    if not term_def.strip():
+        st.error("Please provide Term Definition.")
+        st.stop()
+    if not label.strip():
+        st.error("Please provide Label.")
+        st.stop()
+    if not label_def.strip():
+        st.error("Please provide Label Definition.")
+        st.stop()
+
+    try:
+        out = classify_skos_match(
+            term_a=term.strip(),
+            gen_def=term_def.strip(),
+            term_b=label.strip(),
+            onto_def=label_def.strip(),
+        )
+    except Exception as e:
+        st.error(f"Verification failed: {e}")
+        st.stop()
+
+    predicted = (out.get("mapping_type") or "").strip().lower()
+    explanation = (out.get("explanation") or "").strip()
+    provided = (provided_skos or "").strip().lower()
+
+    if predicted == provided:
+        st.success(f"✅ The provided SKOS class is correct: **{provided}**")
+    else:
+        # If mismatch, show predicted + reasoning
+        msg = (
+            f"⚠️ Provided SKOS class: **{provided}**\n\n"
+            f"Predicted SKOS class (from classify_skos_match): **{predicted or 'unknown'}**\n\n"
+            f"Explanation:\n{explanation or '—'}"
+        )
+        st.warning(msg)
+
+else:
+    st.info("Fill the fields above and click **Verify SKOS match** to validate the provided SKOS class.")
+
