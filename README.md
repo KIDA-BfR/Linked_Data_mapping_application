@@ -30,13 +30,13 @@ To try the MCP version:
 ---
 # App Design 
 Application provides an acces to the Mapping and verification services 
-[Figure 0 - App design](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Application_design.png)
+![Figure 0 - App design](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Application_design.png)
 
 # Starter page
 
 Once the application is run, the user sees the entry page shown below.
 
-[Figure 1 – Application entry page](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Entry.PNG)
+![Figure 1 – Application entry page](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Entry.PNG)
 
 On this page, the user is prompted to provide an **OpenAI API key** and, optionally, a **LangSmith API key** for application tracing.
 
@@ -58,7 +58,7 @@ The verification can be executed:
 - either via **direct function calls**, or
 - alternatively, via the **MCP-based implementation** (see the corresponding section for details).
 
-[Figure 2 – Verification service interface](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Verification.PNG)
+![Figure 2 – Verification service interface](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Verification.PNG)
 
 ---
 
@@ -72,7 +72,7 @@ The **mapping service** provides the following options:
   using a **single specialized deep agent**
 - Mapping simultaneously to **both Wikidata and BioPortal** using a **multi-agent system**
 
-[Figure 3 – Mapping service options](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Mapping_single.PNG)
+![Figure 3 – Mapping service options](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Mapping_single.PNG)
 
 ---
 
