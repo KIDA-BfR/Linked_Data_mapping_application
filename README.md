@@ -1,6 +1,6 @@
 # Full streamlit app 
 
-Download the repository, install all required dependencies and run Home.py with `strreamlit run Home.py`
+Download the repository, install all required dependencies (see **environment.yml**) and run Home.py with `strreamlit run Home.py`
 
 # Mapping Service (Streamlit) — README
 
