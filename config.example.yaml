@@ -1,0 +1,32 @@
+app_version: PoC
+user_agent_template: 'StreamlitReconciliationApp/0.9 (Contact: Michael.Zarske@bfr.bund.de)
+  requests/python'
+wikidata:
+  api_url: https://www.wikidata.org/w/api.php
+  default_languages:
+  - en
+  - de
+  default_limit: 15
+bioportal:
+  base_url: https://data.bioontology.org
+  api_key: YOUR_API_KEY_HERE
+  trusted_ontologies:
+  - MESH
+  - NCIT
+  - LOINC
+  - FOODON
+  term_ontologies:
+  - NCIT
+  - NIFSTD
+  - SNOMEDCT
+  default_pagesize: 15
+  include_fields:
+  - prefLabel
+  - synonym
+  - definition
+llm:
+  provider: gemini
+  api_key: YOUR_API_KEY_HERE
+  model: deep-research-pro-preview-12-2025
+  base_url: ''
+  langsmith_api_key: ''
