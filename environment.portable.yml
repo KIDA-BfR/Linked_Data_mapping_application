@@ -1,0 +1,33 @@
+name: linked_data_app
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - streamlit
+  - pandas
+  - requests
+  - pydantic
+  - aiohttp
+
+  # LangChain stack (keep versions loose unless you really must pin)
+  - langchain
+  - langchain-core
+  - langchain-community
+  - langsmith
+  - langgraph
+  - langgraph-prebuilt
+  - langgraph-sdk
+
+  # OpenAI-compatible client
+  - openai
+
+  # optional: if you actually use these locally
+  # - rdflib
+
+  - pip:
+      # ensure LangChain OpenAI integration exists
+      - langchain-openai
+      # if these appear in your imports, you must add real packages or remove the imports
+      - mcp
+      - deepagents

@@ -1,0 +1,27 @@
+# Core app
+streamlit
+pandas
+requests
+pydantic
+aiohttp
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-community
+langsmith
+langgraph
+langgraph-prebuilt
+langgraph-sdk
+
+# OpenAI-compatible clients (OpenAI + OpenRouter)
+openai
+langchain-openai
+
+# RDF / Linked Data (only if actually used)
+rdflib
+
+# Utilities
+tqdm
+deepagents==0.3.0
+PyYAML

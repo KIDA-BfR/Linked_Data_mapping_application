@@ -9,7 +9,6 @@ from io import StringIO
 from pydantic import BaseModel, Field
 from typing import Optional
 from langchain_core.messages import HumanMessage
-from langchain_openai import ChatOpenAI
 import os
 
 from pathlib import Path
@@ -125,13 +124,9 @@ based on comparing terms and definitions."""
 # )
 
 def _get_structured_llm():
-    # IMPORTANT: read key from env; if missing, fail with clear message
-    if not os.environ.get("OPENAI_API_KEY"):
-        raise RuntimeError("OPENAI_API_KEY is not set (expected env var).")
-
-    llm_skos = ChatOpenAI(model="gpt-5.1", temperature=0)
+    from llm_factory import build_chat_llm
+    llm_skos = build_chat_llm()
     return llm_skos.with_structured_output(SKOSMatch)
-
 
 
 def classify_skos_match(term_a: str, gen_def: str, term_b: str, onto_def: str):
@@ -186,11 +181,10 @@ class Agentmapping(BaseModel):
     skos: str = Field(description="SKOS_matching class: exact, related or close ")
     explanation: str = Field(description="SKOS_matching logic: rationale of the SKOS_matchcing class" )
 
-llm_format = ChatOpenAI(
-    model="gpt-5.1",
-    temperature=0,
-)
-structured_llm_format = llm_format.with_structured_output(Agentmapping)
+def _get_structured_format_llm():
+    from llm_factory import build_chat_llm
+    llm_format = build_chat_llm()
+    return llm_format.with_structured_output(Agentmapping)
 
 def agentmapping_format(output: str):
     """
@@ -211,8 +205,8 @@ def agentmapping_format(output: str):
     messages = [
         HumanMessage(content=prompt),
     ]
-
-    data: SKOSMatch = structured_llm_format.invoke(messages)
+    structured_llm_format = _get_structured_format_llm()
+    data: Agentmapping = structured_llm_format.invoke(messages)
 
 
     return {

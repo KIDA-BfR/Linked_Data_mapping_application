@@ -16,18 +16,6 @@ from pathlib import Path
 from io import StringIO
 import os
 
-#from langchain_openai import ChatOpenAI
-from langchain.chat_models import init_chat_model
-model = init_chat_model(model="gpt-5.1")
-
-file_path = Path.cwd() / "auxiliary_files" / "autoreconcilitation_training_terms_20251203_formatted.xlsx"
-df = pd.read_excel(file_path) 
-
-trusted_ontologies=['MESH', 'NCIT', 'LOINC', 'FOODON', 'NCBITAXON']
-term_ontologies =["NCIT","NIFSTD","BERO","OCHV","SNOMEDCT"] # for Independent variable list
-
-#df=pd.read_excel("/content/autoreconcilitation_training_terms_20251203_formatted.xlsx")
-
 def build_match_pairs(
     df: pd.DataFrame,
     match_name: str,
@@ -58,35 +46,25 @@ def build_match_pairs(
 
     return buffer.getvalue()
 
-exact_text = build_match_pairs(
-    df,
-    match_name="exactMatch",
-    label_col="exactMatch_label",
-    desc_col="exactMatch_description"
-)
-
-close_text = build_match_pairs(
-    df,
-    match_name="closeMatch",
-    label_col="closeMatch_label",
-    desc_col="closeMatch_description"
-)
-
-related_text = build_match_pairs(
-    df,
-    match_name="relatedMatch",
-    label_col="relatedMatch_label",
-    desc_col="relatedMatch_description"
-)
-
-
-
 def get_multiagent(trusted_ontologies: list[str], term_ontologies: list[str]):
+    try:
+        file_path = Path.cwd() / "auxiliary_files" / "autoreconcilitation_training_terms_20251203_formatted.xlsx"
+        df = pd.read_excel(file_path)
+        exact_text = build_match_pairs(df, "exactMatch", "exactMatch_label", "exactMatch_description")
+        close_text = build_match_pairs(df, "closeMatch", "closeMatch_label", "closeMatch_description")
+        related_text = build_match_pairs(df, "relatedMatch", "relatedMatch_label", "relatedMatch_description")
+    except Exception:
+        exact_text = close_text = related_text = ""
+
+    from llm_factory import build_chat_llm
+    model = build_chat_llm(streaming=False)
+
     # Ensure the key is available in env (set by Streamlit Home page)
-    if not os.environ.get("OPENAI_API_KEY"):
-        raise RuntimeError("OPENAI_API_KEY is not set (expected env var).")
+    if not os.environ.get("LLM_API_KEY"):
+        raise RuntimeError("LLM_API_KEY is not set (expected env var).")
     if not os.environ.get("BIOPORTAL_API_KEY"):
         raise RuntimeError("BIOPORTAL_API_KEY is not set.")
+
     research_instructions_wiki = f"""You task is to match the terms with valid identifiers from wikidata.
 
 First find the identifier that may fit, then use the tools to get additional information about this identifier and based on this information construct the consice definition
@@ -131,6 +109,8 @@ Related matching: The two concepts are associated but not synonymous. Represents
 Keep track on what identifiers you tried to avoid repetitive tries"""
 
     research_instructions_main = """You task is to match the term with valid identifiers from either Bioportal or wikidata.
+
+Before producing JSON, you MUST call the BioPortal or Wikidata agents/tools at least once.
 
 Start with Bioportal and if no identifiers are found proceed with the wikidata.
 

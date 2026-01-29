@@ -4,14 +4,35 @@ Created on Mon Dec 22 00:04:44 2025
 @author: Iurii_Savvateev
 """
 
-
+import os
 import streamlit as st
 
+from openrouter_models import openrouter_model_supports_tools
 from general_tools.skos_tools import classify_skos_match  # adjust if your path differs
 
 
 st.set_page_config(page_title="Verification service", layout="centered")
 st.title("Verification service")
+
+# OpenRouter Tool Capability Check
+provider = os.environ.get("LLM_PROVIDER", "openai")
+model = os.environ.get("LLM_MODEL", "")
+if provider == "openrouter":
+    if not openrouter_model_supports_tools(model):
+        st.error(
+            f"The selected OpenRouter model '{model}' does not support tool calling, "
+            "but this Verification service requires a tool-using agent. "
+            "Please go back to Home and pick a model that supports tools (e.g. gpt-4o, or a non-free model)."
+        )
+        if st.button("← Back to Home"):
+            st.switch_page("Home.py")
+        st.stop()
+
+if not os.environ.get("LLM_API_KEY"):
+    st.error("LLM API key is not set. Please go back to Home and enter it.")
+    if st.button("← Back to Home"):
+        st.switch_page("Home.py")
+    st.stop()
 
 # Back button
 if st.button("← Back to Home"):
@@ -80,4 +101,3 @@ if st.button("Verify SKOS match", use_container_width=True):
 
 else:
     st.info("Fill the fields above and click **Verify SKOS match** to validate the provided SKOS class.")
-
