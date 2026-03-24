@@ -11,24 +11,6 @@
 
 ---
 
-# Checking the MCP Option
-
-As a demonstration of the MCP-based tool call (using the SKOS matching tool as an example), an alternative implementation is provided in:
-
-- **`Verification_service_MCP.py`**
-
-To try the MCP version:
-
-1. Open `Verification_service_MCP.py`.
-2. Copy its contents.
-3. Replace the contents of `Verification_service.py` with it.
-4. Run the application again using:
-
-   ```bash
-   streamlit run Home.py
-   ```
----
-
 # App Design 
 Application provides an acces to the Mapping and verification services 
 ![Figure 0 - App design](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Application_design.png)
@@ -93,5 +75,24 @@ The user can also upload **tables** to map multiple terms at once.
 Example input files are provided in the **`auxiliary_files`** [folder](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/auxiliary_files)
 
 ![Figure 4 – Batch mapping using tables](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Mapping_multiple.PNG)
+
+---
+
+# Checking the MCP Option
+
+As a demonstration of the MCP-based tool call (using the SKOS matching tool as an example), an alternative implementation is provided in:
+
+- **`Verification_service_MCP.py`**
+
+To try the MCP version:
+
+1. Open `Verification_service_MCP.py`.
+2. Copy its contents.
+3. Replace the contents of `Verification_service.py` with it.
+4. Run the application again using:
+
+   ```bash
+   streamlit run Home.py
+   ```
 
 ---
