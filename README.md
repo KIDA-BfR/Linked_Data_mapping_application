@@ -1,4 +1,4 @@
-# General Instructions
+# General Instructions for using LLM4LDReco
 
 1. Download or clone this repository.
 2. Install all required dependencies listed in **`environment.yml`**.
