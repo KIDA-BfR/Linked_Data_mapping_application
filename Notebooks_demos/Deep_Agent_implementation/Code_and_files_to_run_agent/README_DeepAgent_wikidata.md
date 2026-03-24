@@ -1,8 +1,6 @@
-# 🧠 Deep Agent for Wikidata — ESWC Final Version
+# 🧠 Deep Agent for Wikidata
 
-The notebook **`Deep_Agent_wikidata_ESWC_final.ipynb`** contains **all code components** used to generate the mapping runs whose traces are listed in:
-
-📄 **`Links_to_all_run_traces.txt`**
+The notebook **`Deep_Agent_wikidata.ipynb`** contains **all code components** used to generate the mappings
 
 ---
 
