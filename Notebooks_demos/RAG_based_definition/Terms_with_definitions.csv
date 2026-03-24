@@ -1,0 +1,168 @@
+﻿Term;Definition;Definition_type
+Aetiologic agent;"Aetiologic agent: the microorganisms or pathogens responsible for causing the diseases or conditions being studied (i.e., pathogens identified as causes of non-malarial febrile illnesses in Africa).
+
+### References
+
+- [1] Paper_1pntd.0010144.pdf
+- [2] Paper_3_microorganisms-10-01546.pdf";Light_RAG
+References;"**Definition (Concise):** References are the section at the end of a scholarly work that lists the sources cited within the text, providing full bibliographic details so readers can locate and consult the original materials.
+
+### References
+
+- [1] Human and animal leptospirosis in Kenya
+- [2] Non-malarial febrile illnesses in Africa
+- [3] Longitudinal study of selected bacterial zoonoses in febrile outpatients in Garissa County, north-eastern Kenya
+- [4] Longitudinal study of selected bacterial zoonoses in small ruminants in Tana River County, Kenya";Light_RAG
+Bacteria;"Bacteria are organisms that include genera such as Brucella, Leptospira, Escherichia, and Klebsiella. Some of these bacteria are pathogenic and cause infections in humans and animals.
+
+### References
+
+- [2] Paper_1pntd.0010144.pdf
+- [3] Paper_3_microorganisms-10-01546.pdf";Few-shot call GPT 5-nano
+Streptococcus spp.;Streptococcus spp. are bacteria found in various African regions and associated with febrile illnesses.;Light_RAG
+Escherichia spp.;Escherichia spp. are bacterial pathogens found in blood samples contributing to various infections.;Light_RAG
+Typhoidal Salmonella spp.;"Typhoidal Salmonella spp. are Salmonella enterica bacteria, notably Salmonella Typhi and Salmonella Paratyphi, that cause typhoid fever in humans and are a leading cause of febrile illness in parts of Africa, particularly Eastern Africa.
+
+### References
+
+- [1] Paper_2s41598-024-62714-8.pdf
+- [2] Paper_1pntd.0010144.pdf
+- [3] Paper_3_microorganisms-10-01546.pdf";Light_RAG
+Klebsiella spp.;"Klebsiella spp. are bacteria belonging to the Enterobacteriaceae family that have been identified in the literature as agents causing non-malarial febrile illnesses in Africa. The genus includes Klebsiella pneumoniae and is characterized in studies by increasing representation over time and notable resistance to carbapenems and third-generation cephalosporins, with infection rates reported in large patient cohorts (e.g., around 1.8% among 226,762 patients).
+
+### References
+
+- [4] Non-malarial febrile illnesses in Africa
+- [1] Paper_2s41598-024-62714-8.pdf
+- [2] Paper_4pntd.0012527.pdf";Light_RAG
+Pseudomonas spp.;Pseudomonas spp. are bacterial agents found in nasal swabs contributing to respiratory infections.;Light_RAG
+Haemophilus spp.;"Haemophilus spp. are bacteria (including species such as H. influenzae and H. parainfluenzae) identified as etiologic agents of non-malarial febrile illnesses in African patients, with a low proportion of positives (about 1.4%).
+
+### References
+
+- [1] Paper_1pntd.0010144.pdf";Light_RAG
+Proteus spp.;"Proteus spp. are bacteria identified as contributing to fever in metagenomic sequencing analyses.
+
+### References
+
+- [1] Paper_2s41598-024-62714-8.pdf";Light_RAG
+Leptospira spp.;Leptospira spp. are a genus of bacteria responsible for causing leptospirosis.;Light_RAG
+Rickettsial organisms;"### Definition
+
+Rickettsial organisms are bacteria of the genus Rickettsia (Rickettsia spp.), including the spotted fever group (SFG), associated with febrile illnesses (rickettsioses).
+
+### References
+
+- [1] Longitudinal Study of Selected Bacterial Zoonoses in Small Ruminants in Tana River County, Kenya
+- [2] Non-malarial febrile illnesses in Africa
+- [3] Q fever, spotted fever group, and typhus group rickettsioses among hospitalized febrile patients in northern Tanzania";Light_RAG
+Rotaviruses;Rotaviruses are viruses that cause gastrointestinal infections and are diagnosed through stool samples.;Light_RAG
+Enteroviruses;"Enteroviruses are viruses often found in nasal swabs linked to respiratory infections.
+
+### References
+
+- [1] Non-malarial febrile illnesses in Africa";Light_RAG
+Alphacoronaviruses;Alphacoronaviruses are types of viruses found in nasal swabs associated with upper respiratory infections.;Light_RAG
+Orthohepadnaviruses;Genus of hepatitis B–like DNA viruses that infect mammals, including human hepatitis B virus, and primarily target the liver.;Single Call GPT 5.1
+Ebolaviruses;Ebolaviruses are a group of viruses that cause Ebola virus disease and are a significant public health threat in Africa, targeted by coordinated outbreak surveillance and response efforts.;Light_RAG
+Mammarenavirus;Genus of enveloped, bi‑segmented RNA viruses (family Arenaviridae) that naturally infect rodents and can cause hemorrhagic fevers in humans.;Single Call GPT 5.1
+Parasites and fungi;Eukaryotic pathogens including parasitic protozoa and helminths together with pathogenic yeasts and molds that can cause disease in humans and animals.;Single Call GPT 5.1
+Cryptococcus spp.;Encapsulated yeast fungi, notably Cryptococcus neoformans and C. gattii, that cause cryptococcosis, often presenting as meningitis or pulmonary disease.;Single Call GPT 5.1
+Candida spp.;Genus of yeasts, such as Candida albicans, that are normal commensals but can cause opportunistic infections (candidiasis) of mucosa, skin and blood.;Single Call GPT 5.1
+outbreak investigation;An outbreak investigation is a study that provides epidemiological descriptions and demographic information about an outbreak.;Light_RAG
+longitudinal study;Longitudinal study: a research design characterized by repeated observations or measurements of the same variables over time to monitor changes.;Light_RAG
+Study setting;"**Study setting**: The geographic locations and population context in which a study is conducted, including where data are collected (e.g., villages, communities, hospitals) and the characteristics of the populations studied.
+
+### References
+
+- [1] Non-malarial febrile illnesses in Africa
+- [2] Human and Animal Leptospirosis in Kenya";Light_RAG
+urban;"Urban: Relating to a city or densely populated area; a setting such as the Kibera urban settlement in Nairobi, Kenya, used in studies of Leptospira infection in rodents. 
+
+### References
+
+- [3] Human and animal leptospirosis in Kenya";Few-shot call GPT 5-nano
+rural;"Rural: a non-urban, countryside area outside towns or cities; in the provided literature, rural settings include pastoral, irrigated, and riverine environments (e.g., villages in Tana River County, Kenya) where study populations and animals are located away from urban centers.";Light_RAG
+peri-urban;Zone at the fringe of a city where urban and rural land uses mix, typically with rapid population growth and limited infrastructure.;Single Call GPT 5.1
+sub-urban;Residential areas on the outskirts of a city with lower housing density than the urban core but closely linked to it economically and socially.;Single Call GPT 5.1
+semi-urban;Settlements showing both rural and urban characteristics, such as small towns or trading centres with basic services and non‑farm employment.;Single Call GPT 5.1
+Location of fever measurement;The anatomical site at which fever temperature is measured.;Light_RAG
+Higgins_I2_statistic;"### Definition
+Higgins' I² statistic is a measure used in meta-analyses to quantify heterogeneity across studies by expressing the percentage of total variation in study effect estimates that is due to real differences in effects rather than sampling error.";Light_RAG
+Total;"Total: the overall sum or aggregate quantity in a dataset; in this literature, it denotes the total number of sequencing reads produced for a sample (Total reads).
+
+### References
+
+- [1] Paper_2s41598-024-62714-8.pdf
+- [2] Paper_4pntd.0012527.pdf
+- [3] Paper_1pntd.0010144.pdf";Light_RAG
+Odds_Ratio;"Odds Ratio: The odds ratio is the exponentiated coefficient from a logistic regression that represents the odds of the outcome occurring with a given exposure (predictor) relative to the odds of the outcome occurring without that exposure.
+
+### References
+
+- [3] Microorganisms 2022, 10, 1546";Light_RAG
+CI_Lower_Limit;"### Definition
+
+CI_Lower_Limit: The lower bound of a confidence interval—the smallest value in the interval representing the range within which the true parameter is estimated to lie at the given confidence level.";Light_RAG
+PCR_target;PCR_target refers to the specific genetic locus or DNA sequence that is used as the target in a Polymerase Chain Reaction (PCR) assay to detect or identify a particular pathogen.;Light_RAG
+Primers_and_Probes;"Primers and Probes are short sequences of nucleotides used in PCR-based methods to identify specific DNA sequences of pathogens, enabling pathogen detection.
+
+### References
+
+- [1] Paper_2s41598-024-62714-8.pdf
+- [3] Paper_3_microorganisms-10-01546.pdf";Light_RAG
+Sequence_and_Modifications;"Term: Sequence_and_Modifications
+
+Definition: The nucleotide sequence of a PCR primer or probe (5′ → 3′) including any chemical modifications (e.g., fluorescent labels like FAM/HEX, quenchers like BHQ) used to detect a target organism in PCR-based diagnostics.
+
+### References
+
+- [1] Paper_3_microorganisms-10-01546.pdf";Few-shot call GPT 5-nano
+Reproductive status;Reproductive status indicates whether animals are active or inactive in terms of breeding.;Light_RAG
+Active;**Active:** in reproductive terms, animals that are currently breeding or actively reproducing.;Light_RAG
+Inactive;Inactive means not actively breeding.;Light_RAG
+Goat;"Goat: a domesticated small ruminant livestock animal commonly kept by humans and frequently studied in veterinary and zoonotic disease research.
+
+### References
+
+- [1] Longitudinal Study of Selected Bacterial Zoonoses in Small Ruminants in Tana River County, Kenya
+- [2] Humanand animal leptospirosis in Kenya";Light_RAG
+Sheep;"### Definition
+
+Sheep are small ruminant livestock (domesticated animals) that were included as study subjects in Kenya to investigate zoonotic bacterial infections; in a Kenyan longitudinal study, 88 sheep were sampled (alongside goats) to assess seroprevalence and seroconversions for Leptospira, Brucella, and Coxiella burnetii.
+
+### References
+
+- [1] Paper_3_microorganisms-10-01546.pdf
+- [2] Paper_4pntd.0012527.pdf";Light_RAG
+Reproductive status;Reproductive status indicates whether animals are active or inactive in terms of breeding.;Light_RAG
+wolfii;Leptospira wolffii, a pathogenic Leptospira species detected in humans and animals and implicated in leptospirosis in several regions.;Single Call GPT 5.1
+hardjo;Hardjo is a Leptospira serovar (serovariant) associated with bovine leptospirosis.;Light_RAG
+grippotyphosa;Grippotyphosa is a leptospiral serovar (serogroup) that shows high agglutinating titres in the Microscopic Agglutination Test (MAT) and is commonly investigated in MAT panels for leptospirosis diagnosis.;Light_RAG
+copenhageni;Leptospira interrogans serovar Copenhageni, a highly invasive leptospiral serovar that frequently causes severe human leptospirosis.;Single Call GPT 5.1
+Turkana;"Turkana is a district in Kenya.
+
+In the literature, Turkana District is cited as a site where a survey on Leptospira antibodies was conducted.
+
+### References
+
+- [1] Paper_4pntd.0012527.pdf";Light_RAG
+Ol Jogi Oldaiga;Private wildlife and livestock ranch areas (Ol Jogi and Oldaiga) on the Laikipia plateau in central Kenya, representing a wildlife–livestock interface landscape used for ecological and disease studies.;Single Call GPT 5.1
+Kabete;Kabete is a location in Kenya that serves as a catchment area in studies on cattle.;Light_RAG
+Nakuru;"Nakuru is a district (region) in Kenya where research on infectious abortion in dairy cattle was conducted.
+
+### References
+
+- [1] Paper_4pntd.0012527.pdf";Light_RAG
+lora;;
+Masai Mara Game Reserve;"Term: Masai Mara Game Reserve
+Definition: Masai Mara Game Reserve is an ecosystem in Kenya involved in studies on spotted fever group rickettsioses.";Few-shot call GPT 5-nano
+Kabete Veterinary Research Laboratory;Historic veterinary research and diagnostic laboratory at Kabete near Nairobi, Kenya, which served as a central facility for animal disease investigation and vaccine development in East Africa.;Single Call GPT 5.1
+Athi River Hopcraft Ranch;Large experimental game and cattle ranch near Athi River, Kenya, established by David Hopcraft and used for wildlife ranching, ecological and livestock‑disease research.;Single Call GPT 5.1
+agglutination lysis test and or agglutination test;Agglutination Test: a diagnostic method visualized in Panel (b).;Light_RAG
+Outbreak;"An outbreak is an occurrence of disease or infection that is presented in purple on the map.
+
+### References
+
+- [1] Human and animal leptospirosis in Kenya";Light_RAG
+Northern Frontier Province;Former administrative region in northern Kenya (also called Northern Frontier District), arid and sparsely populated, bordering Ethiopia and Somalia and historically important for pastoralism and security policy.;Single Call GPT 5.1
