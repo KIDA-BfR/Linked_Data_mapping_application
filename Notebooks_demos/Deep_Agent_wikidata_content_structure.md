@@ -10,7 +10,6 @@ Contains the implementation and resources for the two principal stages of the te
 📁**Deep_Agent_implementation**  
    - **`Codes-and_files_to_run_agent`**  
      - Contains all code and files required to reproduce wikidata deep agent runs.  
-     - Includes LangSmith trace links used in the paper.  
    - **`Wikidata_tools`**  
      - Demonstrates the use of custom tools for interacting with the Wikidata API.  
      - Provides examples of querying, retrieving entity facts, and property expansion.  
