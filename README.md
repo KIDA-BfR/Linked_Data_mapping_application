@@ -32,9 +32,12 @@ To try the MCP version:
 # App Design 
 Application provides an acces to the Mapping and verification services 
 ![Figure 0 - App design](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Application_design.png)
-Example run and principle architecture 
+# Principle architecture  
+A: Example run
+B: Single agent structure and trace 
+C: Multiagent system
 ![Figure 0 - Software design ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Software_design.png)
-Preliminary benchmarkings
+# Preliminary Benchmarking results 
 ![Figure 0 - Benchmarkings ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Preliminary_benchmarking.png)
 
 # Starter page
