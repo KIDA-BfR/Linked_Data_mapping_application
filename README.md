@@ -9,6 +9,7 @@
    ```
 4. Cite our work as
  ```Savvateev, I., Günther, T., Wainaina, M., & Filter, M. (2026, March 24). *LLM4LDReco software* [Conference presentation, SWAT4HCLS]. https://github.com/KIDA-BfR/Linked_Data_mapping_application```
+Or use the following [RIS file](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/LLM4LDReco.ris)
 
 **Note**: One can dive into the code and details using [demonstration notebooks](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/Notebooks_demos)
 
