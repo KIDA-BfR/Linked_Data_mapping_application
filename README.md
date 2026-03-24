@@ -35,9 +35,9 @@ Application provides an acces to the Mapping and verification services
 # Principle architecture  
 ## A. Example run
 
-## B. Single agent structure and trace
+## B. [Single agent structure and trace](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/Notebooks_demos/README_Deep_Agent_wikidata_content_structure.md)
 
-## C. Multiagent system 
+## C. [Multiagent system](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/Notebooks_demos/README_Multiagent_system.md) 
 ![Figure 0 - Software design ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Software_design.png)
 # Preliminary Benchmarking results 
 ![Figure 0 - Benchmarkings ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Preliminary_benchmarking.png)
