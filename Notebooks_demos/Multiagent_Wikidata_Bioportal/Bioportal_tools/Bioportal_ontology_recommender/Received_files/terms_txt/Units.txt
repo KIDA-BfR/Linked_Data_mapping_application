@@ -1,0 +1,1 @@
+%,% vol/vol,% vol/wt,% wt/vol,% wt/wt,Log10(count/g),MPa,Mpa,True/False,count/g,d,g,g/L,h,kGy,kGy/h,log10(count),log10(count/cm2),log10(count/g),log10(count/g), count/g,log10(count/min),log10(count/ml),mM,mg/L,mg/kg,mg/l,mg/ml,min,mmol,mmol, g/100g,mol,ppm,s,°C,µg/ml,ºC,μg/g,μg/ml,μmol/l,μmol/ml

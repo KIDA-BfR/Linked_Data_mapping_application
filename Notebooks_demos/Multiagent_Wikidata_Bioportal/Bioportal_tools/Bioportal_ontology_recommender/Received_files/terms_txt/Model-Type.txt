@@ -1,0 +1,1 @@
+Growth,Growth, reduction,Growth/No growth boundary model,Inactivation,Metabolite formation,Spoilage,Survival,Transfer

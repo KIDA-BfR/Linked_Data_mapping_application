@@ -1,0 +1,1 @@
+Concentration,Concentration - Diff,D-value,Dvalue,Generation time,Lag time,Logit(P),Maximum population density,Nt,Rate,Shelf life duration,Time-to-X-log increase,Time-to-X-log reduction,concentration,gamma,generation time,growth probability,lag time,max rate,presence probability,rate,reduction,time-to-X-log increase

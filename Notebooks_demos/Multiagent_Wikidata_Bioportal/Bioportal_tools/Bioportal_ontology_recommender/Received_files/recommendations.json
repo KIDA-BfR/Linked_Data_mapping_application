@@ -1,0 +1,158 @@
+{
+  "combined.txt": [
+    "MESH",
+    "SNOMEDCT",
+    "BERO",
+    "NCBITAXON",
+    "NCIT",
+    "NIFSTD",
+    "FMPM",
+    "FOODON",
+    "IOBC",
+    "OCHV",
+    "RCD",
+    "ENVTHES"
+  ],
+  "Model-DependentVariables.txt": {
+    "overlapped": [
+      "ENVTHES",
+      "NCIT",
+      "IOBC"
+    ],
+    "non_overlapped": [
+      "METPO",
+      "LOINC",
+      "COMO"
+    ]
+  },
+  "Model-Foodprocess.txt": {
+    "overlapped": [
+      "IOBC",
+      "OCHV",
+      "NCIT",
+      "SNOMEDCT"
+    ],
+    "non_overlapped": [
+      "CHMO",
+      "GO-EXT"
+    ]
+  },
+  "Model-IndependentVariables.txt": {
+    "overlapped": [
+      "NCIT",
+      "NIFSTD",
+      "BERO",
+      "OCHV",
+      "SNOMEDCT"
+    ],
+    "non_overlapped": [
+      "LOINC"
+    ]
+  },
+  "Model-Type.txt": {
+    "overlapped": [
+      "NCIT",
+      "IOBC",
+      "OCHV",
+      "ENVTHES"
+    ],
+    "non_overlapped": [
+      "LOINC",
+      "PREMEDONTO"
+    ]
+  },
+  "PMF-Environment.txt": {
+    "overlapped": [
+      "SNOMEDCT",
+      "OCHV",
+      "MESH",
+      "NCIT",
+      "RCD"
+    ],
+    "non_overlapped": [
+      "MDM"
+    ]
+  },
+  "PMF-EnvironmentDetails.txt": {
+    "overlapped": [
+      "FMPM",
+      "SNOMEDCT",
+      "MESH",
+      "FOODON",
+      "NCIT",
+      "IOBC"
+    ],
+    "non_overlapped": [
+      "MDM",
+      "CRISP"
+    ]
+  },
+  "PMF-Organism.txt": {
+    "overlapped": [
+      "MESH",
+      "SNOMEDCT",
+      "NCBITAXON",
+      "BERO",
+      "NIFSTD",
+      "IOBC"
+    ],
+    "non_overlapped": []
+  },
+  "PMF-OrganismDetails.txt": {
+    "overlapped": [
+      "SNOMEDCT",
+      "RCD",
+      "OCHV"
+    ],
+    "non_overlapped": [
+      "LOINC",
+      "MIXS",
+      "FB-BT"
+    ]
+  },
+  "Software-Accessibility.txt": {
+    "overlapped": [
+      "NCIT",
+      "OCHV"
+    ],
+    "non_overlapped": [
+      "PREMEDONTO",
+      "HL7",
+      "PESONT",
+      "GFF-M4M"
+    ]
+  },
+  "Software.txt": {
+    "overlapped": [
+      "NCIT"
+    ],
+    "non_overlapped": [
+      "PR",
+      "FB-SP"
+    ]
+  },
+  "Units.txt": {
+    "overlapped": [
+      "SNOMEDCT",
+      "NCIT",
+      "RCD",
+      "ENVTHES"
+    ],
+    "non_overlapped": [
+      "UO",
+      "EFO"
+    ]
+  },
+  "additives.txt": {
+    "overlapped": [
+      "BERO",
+      "NCIT",
+      "MESH",
+      "OCHV",
+      "FOODON"
+    ],
+    "non_overlapped": [
+      "NDDF"
+    ]
+  }
+}
