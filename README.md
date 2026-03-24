@@ -33,9 +33,11 @@ To try the MCP version:
 Application provides an acces to the Mapping and verification services 
 ![Figure 0 - App design](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Application_design.png)
 # Principle architecture  
-A: Example run
-B: Single agent structure and trace 
-C: Multiagent system
+## A. Example run
+
+## B. Single agent structure and trace
+
+## C. Multiagent system 
 ![Figure 0 - Software design ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Software_design.png)
 # Preliminary Benchmarking results 
 ![Figure 0 - Benchmarkings ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Preliminary_benchmarking.png)
