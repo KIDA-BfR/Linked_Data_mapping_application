@@ -7,7 +7,7 @@
    ```bash
    streamlit run Home.py
    ```
-**Note**: One can run all codes directly in Colab without a pre-installation. See https://github.com/KIDA-BfR/Linked_Data
+**Note**: One can dive into the code and details using demonstration notebooks
 
 ---
 
@@ -28,9 +28,14 @@ To try the MCP version:
    streamlit run Home.py
    ```
 ---
+
 # App Design 
 Application provides an acces to the Mapping and verification services 
 ![Figure 0 - App design](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Application_design.png)
+Example run and principle architecture 
+![Figure 0 - Software design ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Software_design.png)
+Preliminary benchmarkings
+![Figure 0 - Benchmarkings ](https://github.com/KIDA-BfR/Linked_Data_mapping_application/blob/main/visuals/Preliminary_benchmarking.png)
 
 # Starter page
 
