@@ -7,7 +7,7 @@
    ```bash
    streamlit run Home.py
    ```
-**Note**: One can dive into the code and details using demonstration notebooks
+**Note**: One can dive into the code and details using [demonstration notebooks](https://github.com/KIDA-BfR/Linked_Data_mapping_application/tree/main/Notebooks_demos)
 
 ---
 
